@@ -19,4 +19,10 @@ public class ElectricCar extends Car
     {
         this.batteryCapacity = batteryCapacity;
     }
+
+    @Override
+    String vehicleType()
+    {
+        return "Electric Car";
+    }
 }
