@@ -1,6 +1,6 @@
 package vehicles;
 
-public class ElectricCar extends Car
+public class ElectricCar extends Car implements IElectricVehicle
 {
     public ElectricCar()
     {
