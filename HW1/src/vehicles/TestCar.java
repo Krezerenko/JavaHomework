@@ -1,7 +1,4 @@
-package app;
-
-import vehicles.Car;
-import vehicles.ElectricCar;
+package vehicles;
 
 public class TestCar
 {

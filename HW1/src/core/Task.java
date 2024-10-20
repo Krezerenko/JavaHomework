@@ -1,6 +1,7 @@
 package core;
 
 import java.util.Scanner;
+import java.util.Set;
 
 public abstract class Task implements IExecutable
 {
@@ -31,5 +32,23 @@ public abstract class Task implements IExecutable
         Scanner input = new Scanner(System.in);
         input.nextLine();
         System.out.println();
+    }
+
+    public static boolean getLogicalInput()
+    {
+        Set<String> positive = Set.of("yes", "yeah", "right", "probably", "да", "ага", "наверное", "ну типа");
+        Set<String> negative = Set.of("no", "nope", "nah", "not a chance", "нет", "не", "вряд ли", "ни за что");
+
+        Scanner input = new Scanner(System.in);
+        String answer = input.nextLine();
+        String answerLowercase = answer.toLowerCase();
+        while(!positive.contains(answerLowercase) && !negative.contains(answerLowercase))
+        {
+            System.out.print("Неверное значение. Введите \"да\" или \"нет\": ");
+            answer = input.nextLine();
+            answerLowercase = answer.toLowerCase();
+        }
+
+        return positive.contains(answerLowercase);
     }
 }
