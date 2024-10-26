@@ -1,3 +1,5 @@
+package loan;
+
 import java.util.Scanner;
 
 public class TestLoanClass {
@@ -16,7 +18,7 @@ public class TestLoanClass {
         System.out.print("Введите сумму кредита в руб., например, 120000.95: ");
         double loanAmount =  input.nextDouble();
 
-        // Создать объект типа Loan
+        // Создать объект типа loan.Loan
         Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
 
         // Отобразить дату взятия, ежемесячный платеж и общую стоимость кредита
