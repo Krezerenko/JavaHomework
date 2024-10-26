@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class GeometricInput
 {
-    public static Triangle1 getTriangle()
+    public static Triangle getTriangle()
     {
-        Triangle1 tr = new Triangle1();
+        Triangle tr = new Triangle();
 
         Scanner input = new Scanner(System.in);
 
@@ -60,6 +60,27 @@ public class GeometricInput
         rec.setFilled(Task.getLogicalInput());
 
         return rec;
+    }
+
+    public static Square getSquare()
+    {
+        Square sq = new Square();
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Введите ширину квадрата: ");
+        sq.setSide(input.nextDouble());
+
+        System.out.print("Введите высоту квадрата: ");
+        sq.setSide(input.nextDouble());
+        input.nextLine();
+
+        System.out.print("Введите цвет квадрата: ");
+        sq.setColor(input.nextLine());
+
+        System.out.print("Квадрат закрашен?\n");
+        sq.setFilled(Task.getLogicalInput());
+
+        return sq;
     }
 
     public static Circle getCircle()

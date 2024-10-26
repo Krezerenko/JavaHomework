@@ -1,17 +1,17 @@
 package shapes;
 
-public class Triangle1 extends GeometricObject
+public class Triangle extends GeometricObject
 {
     private double side1, side2, side3;
 
-    public Triangle1()
+    public Triangle()
     {
         this.side1 = 1.0;
         this.side2 = 1.0;
         this.side3 = 1.0;
     }
 
-    public Triangle1(double side1, double side2, double side3) throws IllegalTriangleException
+    public Triangle(double side1, double side2, double side3) throws IllegalTriangleException
     {
         if (side1 >= side2 + side3 || side2 >= side1 + side3 || side3 >= side1 + side2)
             throw new IllegalTriangleException();
@@ -78,5 +78,11 @@ public class Triangle1 extends GeometricObject
     public String toString()
     {
         return "Треугольник:\nСторона1: " + side1 + "\nСторона2: " + side2 + "\nСторона3: " + side3;
+    }
+
+    @Override
+    public void howToColor()
+    {
+        System.out.println("Раскрасьте все три стороны.");
     }
 }

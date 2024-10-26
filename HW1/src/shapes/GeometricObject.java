@@ -1,6 +1,6 @@
 package shapes;
 
-public abstract class GeometricObject implements Comparable<GeometricObject>
+public abstract class GeometricObject implements Comparable<GeometricObject>, Colorable
 {
     protected String color = "белый";
     protected boolean isFilled;
@@ -61,6 +61,6 @@ public abstract class GeometricObject implements Comparable<GeometricObject>
     @Override
     public int compareTo(GeometricObject o)
     {
-        return (int)(this.getArea() - o.getArea());
+        return (int)Math.signum(this.getArea() - o.getArea());
     }
 }

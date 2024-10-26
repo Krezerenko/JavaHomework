@@ -4,78 +4,47 @@ import core.Task;
 import core.TaskContainer;
 import shapes.*;
 
-import java.util.Scanner;
-
-public class Homework7 extends TaskContainer
+public class Homework7 extends Task
 {
     public Homework7(String name)
     {
         super(name);
-        tasks = new Task[] { new Task1("1"), new Task2("2"), new Task3("3"), new Task4("4") };
     }
 
-    private static class Task1 extends Task
+    @Override
+    public void execute()
     {
-        public Task1(String name)
-        {
-            super(name);
-        }
+        Triangle tr = GeometricInput.getTriangle();
+        System.out.println(tr);
+        Rectangle rec = GeometricInput.getRectangle();
+        Square sq = GeometricInput.getSquare();
+        Circle circ = GeometricInput.getCircle();
+        System.out.println("Первый сравниваемый круг:");
+        ComparableCircle circ1 = (ComparableCircle) GeometricInput.getCircle();
+        System.out.println("Второй сравниваемый круг:");
+        ComparableCircle circ2 = (ComparableCircle) GeometricInput.getCircle();
 
-        @Override
-        public void execute()
-        {
-            Triangle1 tr1 = GeometricInput.getTriangle();
-            System.out.println(tr1);
-            Rectangle rec = GeometricInput.getRectangle();
-            Circle circ = GeometricInput.getCircle();
+        System.out.println("Площадь треугольника: " + tr.getArea());
+        System.out.println("Площадь прямоугольника: " + rec.getArea());
+        System.out.println("Площадь квадрата: " + rec.getArea());
+        System.out.println("Площадь круга: " + circ.getArea());
+        System.out.println("Площадь первого сравниваемого круга: " + circ.getArea());
+        System.out.println("Площадь второго сравниваемого круга: " + circ.getArea());
 
-            System.out.println("Площадь треугольника: " + tr1.getArea());
-            System.out.println("Площадь прямоугольника: " + rec.getArea());
-            System.out.println("Площадь круга: " + circ.getArea());
+        System.out.println("Максимальная фигура:\n" + GeometricObject.max(GeometricObject.max(GeometricObject.max(tr, rec), sq), circ));
+        System.out.println("Максимальный из двух сравниваемых кругов:\n" + ComparableCircle.max(circ1, circ2));
 
-            System.out.println("Максимальная фигура: " + GeometricObject.max(GeometricObject.max(tr1, rec), circ));
-        }
-    }
-
-    private static class Task2 extends Task
-    {
-        public Task2(String name)
-        {
-            super(name);
-        }
-
-        @Override
-        public void execute()
-        {
-
-        }
-    }
-
-    private static class Task3 extends Task
-    {
-        public Task3(String name)
-        {
-            super(name);
-        }
-
-        @Override
-        public void execute()
-        {
-
-        }
-    }
-
-    private static class Task4 extends Task
-    {
-        public Task4(String name)
-        {
-            super(name);
-        }
-
-        @Override
-        public void execute()
-        {
-
-        }
+        System.out.println("Способ раскраски треугольника:\n");
+        tr.howToColor();
+        System.out.println("Способ раскраски прямоугольника:\n");
+        rec.howToColor();
+        System.out.println("Способ раскраски квадрата:\n");
+        sq.howToColor();
+        System.out.println("Способ раскраски круга:\n");
+        circ.howToColor();
+        System.out.println("Способ раскраски первого сравниваемого круга:\n");
+        circ1.howToColor();
+        System.out.println("Способ раскраски второго сравниваемого круга:\n");
+        circ2.howToColor();
     }
 }

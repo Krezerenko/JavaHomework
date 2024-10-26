@@ -8,7 +8,13 @@ public class HomeworkSelector extends TaskContainer
     public HomeworkSelector()
     {
         super("root");
-        tasks = new Task[] { new Homework1("1"), new Homework2("2"), new Homework3("3"), new Homework4("4"), new Homework5("5"), new Homework7("7") };
+        tasks = new Task[] {
+                new Homework1("1"),
+                new Homework2("2"),
+                new Homework3("3"),
+                new Homework4("4"),
+                new Homework5("5"),
+                new Homework7("7") };
     }
 
     @Override

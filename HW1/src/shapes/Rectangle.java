@@ -53,4 +53,10 @@ public class Rectangle extends GeometricObject
     {
         return 2 * (width + height);
     }
+
+    @Override
+    public void howToColor()
+    {
+        System.out.println("Раскрасьте все четыре стороны.");
+    }
 }

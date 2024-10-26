@@ -51,4 +51,10 @@ public class Circle extends GeometricObject
         System.out.println("Круг создан " + getDateCreated() +
                 " и его радиус равен " + radius);
     }
+
+    @Override
+    public void howToColor()
+    {
+        System.out.println("Раскрасьте окружность.");
+    }
 }
