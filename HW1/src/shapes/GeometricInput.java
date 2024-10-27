@@ -67,10 +67,7 @@ public class GeometricInput
         Square sq = new Square();
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Введите ширину квадрата: ");
-        sq.setSide(input.nextDouble());
-
-        System.out.print("Введите высоту квадрата: ");
+        System.out.print("Введите сторону квадрата: ");
         sq.setSide(input.nextDouble());
         input.nextLine();
 
@@ -86,6 +83,24 @@ public class GeometricInput
     public static Circle getCircle()
     {
         Circle circ = new Circle();
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Введите радиус круга: ");
+        circ.setRadius(input.nextDouble());
+        input.nextLine();
+
+        System.out.print("Введите цвет круга: ");
+        circ.setColor(input.nextLine());
+
+        System.out.print("Круг закрашен?\n");
+        circ.setFilled(Task.getLogicalInput());
+
+        return circ;
+    }
+
+    public static ComparableCircle getComparableCircle()
+    {
+        ComparableCircle circ = new ComparableCircle();
         Scanner input = new Scanner(System.in);
 
         System.out.print("Введите радиус круга: ");

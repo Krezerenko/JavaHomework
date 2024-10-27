@@ -70,12 +70,13 @@ public class Homework8 extends TaskContainer
                     double annualInterestRate = input.nextDouble();
                     int numberOfYears = input.nextInt();
                     double loanAmount = input.nextDouble();
-                    Loan loan = new Loan();
+                    Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
                     break;
                 }
                 catch(InputMismatchException e)
                 {
                     System.out.println("Неправильный ввод! Повторите ввод:");
+                    input.nextLine();
                 }
                 catch (IllegalArgumentException e)
                 {
