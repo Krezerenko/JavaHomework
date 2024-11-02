@@ -1,7 +1,18 @@
 package shapes;
 
+import java.awt.*;
+
 public class ComparableCircle extends Circle
 {
+    public ComparableCircle(double radius)
+    {
+        super(radius);
+    }
+
+    public ComparableCircle()
+    {
+        super();
+    }
     @Override
     public int compareTo(GeometricObject o)
     {

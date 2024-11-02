@@ -19,7 +19,7 @@ public class Homework8 extends TaskContainer
         tasks = new Task[]{ new Task1("1"), new Task2("2"), new Task3("3") };
     }
 
-    public static class Task1 extends Task
+    private static class Task1 extends Task
     {
         public Task1(String name)
         {
@@ -51,7 +51,7 @@ public class Homework8 extends TaskContainer
         }
     }
 
-    public static class Task2 extends Task
+    private static class Task2 extends Task
     {
         public Task2(String name)
         {
@@ -86,7 +86,7 @@ public class Homework8 extends TaskContainer
         }
     }
 
-    public static class Task3 extends Task
+    private static class Task3 extends Task
     {
         public Task3(String name)
         {
