@@ -16,7 +16,8 @@ public class HomeworkSelector extends TaskContainer
                 new Homework5("5"),
                 new Homework7("7"),
                 new Homework8("8"),
-                new Homework9("9")};
+                new Homework9("9"),
+                new Homework10("10")};
     }
 
     @Override

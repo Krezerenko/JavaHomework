@@ -1,4 +1,4 @@
-package homeworks;
+package structs;
 
 import java.util.Arrays;
 

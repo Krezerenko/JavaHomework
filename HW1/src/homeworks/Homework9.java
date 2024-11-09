@@ -3,6 +3,8 @@ package homeworks;
 import core.Task;
 import core.TaskContainer;
 import shapes.ComparableCircle;
+import structs.GenericStack;
+import structs.GenericStack2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
