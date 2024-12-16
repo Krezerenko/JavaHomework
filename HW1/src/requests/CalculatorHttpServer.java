@@ -49,7 +49,7 @@ public class CalculatorHttpServer
             if (input == null) handleNoInput(out);
             else
             {
-                handleAddNote(input.get("n1"), input.get("n2"), input.get("op"), out);
+                handleOperation(input.get("n1"), input.get("n2"), input.get("op"), out);
             }
         }
         else
@@ -76,7 +76,7 @@ public class CalculatorHttpServer
         sendHttpResponse(out, 200, response.toString());
     }
 
-    private static void handleAddNote(String num1, String num2, String op, PrintWriter out)
+    private static void handleOperation(String num1, String num2, String op, PrintWriter out)
     {
         try
         {
